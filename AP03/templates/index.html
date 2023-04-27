@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DSS: CSRF Prevention</title>
+    </head>
+    <body>
+        <h1>Prevention Lab</h1>
+        <p>Tu saldo actual es: {{ session.balance }}</p>
+        <form method="POST">
+            {{ form.csrf_token }}
+            <label for="amount">Cantidad a transferir:</label>
+            {{ form.amount() }}
+            {{ form.submit() }}
+        </form>
+    </body>
+</html>
